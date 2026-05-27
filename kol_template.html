@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{TITLE}}</title>
+<title>{{TITLE}} — Web3 KOL</title>
 <style>
 :root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--gd:#C4946C;--bl:#E8D5C4}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -40,14 +40,35 @@ footer{text-align:center;padding:30px 0 10px;color:var(--wg);font-size:11px;opac
 <body>
 <div class="container">
 <div class="card">
-{{HEADER}}
+<header>
+<div class="avatar">{{AVATAR}}</div>
+<h1>{{NAME}}</h1>
+<p class="subtitle">{{SUBTITLE}}</p>
+<div class="divider"></div>
+</header>
+
+<h2>Social & Platform Links</h2>
+
 {{LINKS}}
-{{STATS}}
-{{BADGES}}
-{{BIO}}
-{{CONNECT}}
-{{FOOTER}}
+
+<div class="data-grid">
+<div class="data-item"><div class="data-num">{{STAT1}}</div><div class="data-label">Total Followers</div></div>
+<div class="data-item"><div class="data-num">{{STAT2}}</div><div class="data-label">Content / Week</div></div>
+<div class="data-item"><div class="data-num">{{STAT3}}</div><div class="data-label">Community</div></div>
 </div>
+
+<h2>Content Focus</h2>
+<div class="badges">
+{{BADGES}}
+</div>
+<p class="bio">{{BIO}}</p>
+
+<h2>How to Connect</h2>
+<p class="bio">{{CONNECT}}</p>
+
+<p class="note">{{NOTE}}</p>
+</div>
+<footer>{{FOOTER}}</footer>
 </div>
 </body>
 </html>
