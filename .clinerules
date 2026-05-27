@@ -6,3 +6,5 @@
 - 不要在完成后做总结或复述刚才做了什么
 - 遇到问题直接说，不要先道歉再解释
 - HTML 文件单文件输出，不拆分
+- 搜索优先用 DuckDuckGo (html.duckduckgo.com/html/?q=)，避免 Google CAPTCHA
+- Puppeteer 用 headless 模式，不弹出窗口
