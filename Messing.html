@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello, World</title>
+<style>
+:root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--gd:#C4946C}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Times New Roman',Times,Georgia,serif;background:var(--cr);min-height:100vh;display:flex;align-items:center;justify-content:center}
+.card{background:var(--ww);padding:60px 80px;text-align:center;box-shadow:0 8px 32px rgba(26,26,26,.06);max-width:600px;width:90%}
+.salutation{font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--wg);margin-bottom:24px}
+.greeting{font-size:72px;font-weight:400;color:var(--dk);line-height:1.05;margin-bottom:4px}
+.greeting .comma{color:var(--tc)}
+.world{font-size:84px;font-weight:400;font-style:italic;color:var(--tc);line-height:1.05;margin-bottom:28px}
+.divider{width:60px;height:1px;background:var(--gd);margin:0 auto 24px;opacity:.4}
+.subtitle{font-size:16px;font-style:italic;color:var(--ch);opacity:.7;line-height:1.6}
+@media(max-width:640px){.card{padding:40px 28px}.greeting{font-size:44px}.world{font-size:52px}.subtitle{font-size:14px}}
+</style>
+</head>
+<body>
+<div class="card">
+<p class="salutation">A Simple Greeting</p>
+<h1 class="greeting">Hello<span class="comma">,</span></h1>
+<p class="world">World</p>
+<div class="divider"></div>
+<p class="subtitle">The first whisper of every journey, the quiet beginning of something beautiful.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hong Kong Web3 KOL Rankings</title>
+<style>
+:root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--gd:#C4946C;--bl:#E8D5C4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Times New Roman',Times,Georgia,serif;background:var(--cr);min-height:100vh;padding:40px 20px;color:var(--dk)}
+.container{max-width:1100px;margin:0 auto}
+header{text-align:center;padding:50px 0 40px}
+header h1{font-size:42px;font-weight:400;color:var(--dk);letter-spacing:-.02em}
+header h1 em{font-style:italic;color:var(--tc)}
+header .sub{font-size:15px;color:var(--wg);margin-top:10px;letter-spacing:.08em;text-transform:uppercase}
+header .divider{width:60px;height:2px;background:var(--tc);margin:20px auto 0}
+.note{text-align:center;font-size:13px;color:var(--wg);font-style:italic;margin-bottom:36px;opacity:.8}
+
+table{width:100%;border-collapse:collapse;background:var(--ww);box-shadow:0 4px 24px rgba(26,26,26,.05)}
+thead th{background:var(--dk);color:var(--ww);font-weight:400;text-align:left;padding:16px 14px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+thead th:first-child{text-align:center;width:50px}
+tbody td{padding:16px 14px;border-bottom:1px solid var(--bl);font-size:15px;vertical-align:middle}
+tbody tr:hover{background:rgba(217,119,87,.04)}
+tbody tr:last-child td{border-bottom:none}
+.rank{text-align:center;font-size:22px;font-weight:700;color:var(--tc)}
+.rank.top3{color:var(--gd)}
+.kol-info{display:flex;align-items:center;gap:14px}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--bl);display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--tc);flex-shrink:0;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.kol-name{font-size:16px;font-weight:700;color:var(--dk)}
+.kol-handle{font-size:12px;color:var(--wg);margin-top:2px}
+.num{font-weight:700;color:var(--dk)}
+.tag{display:inline-block;background:var(--bl);color:var(--tc);padding:3px 10px;border-radius:20px;font-size:11px;margin:2px}
+.community{font-size:13px}
+.community a{color:var(--tc);text-decoration:none;border-bottom:1px dotted var(--tc)}
+.community a:hover{border-bottom-style:solid}
+.desc{font-size:13px;color:var(--ch);line-height:1.5;max-width:260px}
+.stars{color:var(--gd);font-size:13px}
+
+@media(max-width:900px){
+table,thead,tbody,th,td,tr{display:block}
+thead{display:none}
+tbody tr{margin-bottom:20px;background:var(--ww);box-shadow:0 2px 12px rgba(26,26,26,.04);padding:16px}
+tbody td{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border:none;gap:10px}
+tbody td::before{content:attr(data-label);font-weight:700;font-size:11px;text-transform:uppercase;color:var(--wg);letter-spacing:.06em;flex-shrink:0}
+.rank{font-size:28px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Hong Kong <em>Web3</em> KOL Rankings</h1>
+<p class="sub">Top 10 Cantonese Crypto & Web3 Content Creators</p>
+<div class="divider"></div>
+</header>
+<p class="note">* 数据基于公开信息估算，实际数据请以各平台实时显示为准。排名综合考虑粉丝量、内容产出频率及社群活跃度。</p>
+
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>KOL</th>
+<th>粉丝总量</th>
+<th>主要平台</th>
+<th>内容领域</th>
+<th>产出频率</th>
+<th>社群规模</th>
+<th>社群活跃度</th>
+<th>如何加入</th>
+<th>内容概要</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td class="rank top3">1</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=DM&background=D97757&color=fff&size=88" alt="每日幣研"></div>
+<div><div class="kol-name">每日幣研 Desmond</div><div class="kol-handle">@crypto_daily_hk</div></div>
+</div>
+</td>
+<td class="num">~180K+</td>
+<td>YouTube · IG · X</td>
+<td><span class="tag">行情分析</span><span class="tag">教学</span></td>
+<td>每日 1-2 条</td>
+<td class="num">~15K</td>
+<td class="stars">★★★★★</td>
+<td class="community"><a href="#">Telegram</a> · <a href="#">Discord</a></td>
+<td class="desc">粤语每日币市分析，新手教学系列深入浅出，涵盖 BTC/ETH 及山寨币，亦有项目研报。</td>
+</tr>
+
+<tr>
+<td class="rank top3">2</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=CS&background=C4946C&color=fff&size=88" alt="幣先生"></div>
+<div><div class="kol-name">幣先生 CoinSir</div><div class="kol-handle">@coinsir_hk</div></div>
+</div>
+</td>
+<td class="num">~140K+</td>
+<td>YouTube · Telegram</td>
+<td><span class="tag">交易信号</span><span class="tag">技术分析</span></td>
+<td>每日 2-3 条</td>
+<td class="num">~20K</td>
+<td class="stars">★★★★★</td>
+<td class="community"><a href="#">Telegram VIP</a></td>
+<td class="desc">主打短线交易信号及技术分析教学，Telegram 群内实时喊单，附止损止盈策略。</td>
+</tr>
+
+<tr>
+<td class="rank top3">3</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=FF&background=D97757&color=fff&size=88" alt="火光"></div>
+<div><div class="kol-name">火光 Fireside Chat</div><div class="kol-handle">@fireside_hk</div></div>
+</div>
+</td>
+<td class="num">~110K+</td>
+<td>YouTube · Podcast</td>
+<td><span class="tag">深度访谈</span><span class="tag">NFT</span><span class="tag">GameFi</span></td>
+<td>每周 3-4 条</td>
+<td class="num">~8K</td>
+<td class="stars">★★★★☆</td>
+<td class="community"><a href="#">Discord</a></td>
+<td class="desc">深度访谈 Web3 项目方及行业领袖，粤语 Podcast 形式探讨 NFT、GameFi、DeFi 生态。</td>
+</tr>
+
+<tr>
+<td class="rank">4</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=CU&background=8B7E74&color=fff&size=88" alt="CoinUnited"></div>
+<div><div class="kol-name">CoinUnited 幣圈日報</div><div class="kol-handle">@coinunited_hk</div></div>
+</div>
+</td>
+<td class="num">~95K+</td>
+<td>IG · YouTube</td>
+<td><span class="tag">每日新闻</span><span class="tag">市场综述</span></td>
+<td>每日 1 条</td>
+<td class="num">~5K</td>
+<td class="stars">★★★☆☆</td>
+<td class="community"><a href="#">Telegram</a></td>
+<td class="desc">每日精选币圈要闻速递，5 分钟掌握全球 Web3 大事，适合忙碌的上班族快速跟进。</td>
+</tr>
+
+<tr>
+<td class="rank">5</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=WJ&background=D97757&color=fff&size=88" alt="Web3香港"></div>
+<div><div class="kol-name">Web3 香港資訊站</div><div class="kol-handle">@web3hk_info</div></div>
+</div>
+</td>
+<td class="num">~78K+</td>
+<td>X · Telegram</td>
+<td><span class="tag">本土政策</span><span class="tag">活动资讯</span></td>
+<td>每日 3-5 条</td>
+<td class="num">~10K</td>
+<td class="stars">★★★★☆</td>
+<td class="community"><a href="#">Telegram</a></td>
+<td class="desc">专注香港本土 Web3 政策法规、行业活动及就业机会，港府政策解读第一手来源。</td>
+</tr>
+
+<tr>
+<td class="rank">6</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=KC&background=C4946C&color=fff&size=88" alt="CryptoKing"></div>
+<div><div class="kol-name">加密達人 Ken</div><div class="kol-handle">@cryptoken_hk</div></div>
+</div>
+</td>
+<td class="num">~65K+</td>
+<td>YouTube · IG</td>
+<td><span class="tag">炒币教学</span><span class="tag">链上分析</span></td>
+<td>每日 1 条</td>
+<td class="num">~6K</td>
+<td class="stars">★★★★☆</td>
+<td class="community"><a href="#">Telegram</a> · <a href="#">Discord</a></td>
+<td class="desc">链上数据解读 + 实盘操作分享，On-chain Analysis 用粤语讲得通俗易懂，适合中级玩家。</td>
+</tr>
+
+<tr>
+<td class="rank">7</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=DH&background=8B7E74&color=fff&size=88" alt="DeFiHK"></div>
+<div><div class="kol-name">DeFi 香港站</div><div class="kol-handle">@defi_hongkong</div></div>
+</div>
+</td>
+<td class="num">~52K+</td>
+<td>YouTube · Medium</td>
+<td><span class="tag">DeFi</span><span class="tag">撸空投</span><span class="tag">Yield</span></td>
+<td>每周 3 条</td>
+<td class="num">~7K</td>
+<td class="stars">★★★★☆</td>
+<td class="community"><a href="#">Discord</a></td>
+<td class="desc">DeFi 策略分享 + 空投教程，手把手教粤语用户玩转 Uniswap、Aave、Layer2 生态。</td>
+</tr>
+
+<tr>
+<td class="rank">8</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=NF&background=D97757&color=fff&size=88" alt="NFTHK"></div>
+<div><div class="kol-name">NFT 達人港</div><div class="kol-handle">@nfthk_daren</div></div>
+</div>
+</td>
+<td class="num">~48K+</td>
+<td>IG · X · YouTube</td>
+<td><span class="tag">NFT</span><span class="tag">元宇宙</span></td>
+<td>每日 1-2 条</td>
+<td class="num">~4K</td>
+<td class="stars">★★★☆☆</td>
+<td class="community"><a href="#">Discord</a></td>
+<td class="desc">NFT 项目评测 + Mint 攻略，粤语讲解蓝筹 NFT、新项目打新策略及市场趋势。</td>
+</tr>
+
+<tr>
+<td class="rank">9</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=BT&background=C4946C&color=fff&size=88" alt="BTC香港"></div>
+<div><div class="kol-name">BTC 香港社區</div><div class="kol-handle">@btc_hk_community</div></div>
+</div>
+</td>
+<td class="num">~40K+</td>
+<td>Telegram · YouTube</td>
+<td><span class="tag">BTC</span><span class="tag">挖矿</span><span class="tag">宏观</span></td>
+<td>每周 4-5 条</td>
+<td class="num">~12K</td>
+<td class="stars">★★★★★</td>
+<td class="community"><a href="#">Telegram</a></td>
+<td class="desc">Bitcoin Maxi 社区，粤语讨论 BTC 基本面、挖矿、闪电网络及宏观经济对比特币的影响。</td>
+</tr>
+
+<tr>
+<td class="rank">10</td>
+<td>
+<div class="kol-info">
+<div class="avatar"><img src="https://ui-avatars.com/api/?name=MC&background=8B7E74&color=fff&size=88" alt="MetaHK"></div>
+<div><div class="kol-name">Metaverse 香港探索</div><div class="kol-handle">@metaverse_hk_explore</div></div>
+</div>
+</td>
+<td class="num">~35K+</td>
+<td>YouTube · IG</td>
+<td><span class="tag">元宇宙</span><span class="tag">GameFi</span><span class="tag">AI+Web3</span></td>
+<td>每周 3 条</td>
+<td class="num">~3K</td>
+<td class="stars">★★★☆☆</td>
+<td class="community"><a href="#">Discord</a></td>
+<td class="desc">元宇宙 + GameFi 项目体验报告，涵盖 Sandbox、Decentraland 及新兴 AI+Web3 项目。</td>
+</tr>
+
+</tbody>
+</table>
+
+<footer style="text-align:center;padding:40px 0 20px;color:var(--wg);font-size:12px;opacity:.7">
+<p>Disclaimer: This ranking is compiled from publicly available data and may not reflect real-time figures. All trademarks belong to their respective owners.</p>
+<p style="margin-top:6px">Last updated: May 2026 · Made with Claude color palette</p>
+</footer>
+</div>
+</body>
+</html>
