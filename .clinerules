@@ -8,3 +8,7 @@
 - HTML 文件单文件输出，不拆分
 - 搜索优先用 DuckDuckGo (html.duckduckgo.com/html/?q=)，避免 Google CAPTCHA
 - Puppeteer 用 headless 模式，不弹出窗口
+- Puppeteer evaluate 只提取关键结构化数据（链接、数字），禁止拉整页文本
+- 文件修改优先用 replace_in_file，避免 write_to_file 导致全文回显
+- 新建 HTML 文件时复用已有 HTML 模板，只替换内容部分
+- 一次只做一件事，完成后再进行下一步
