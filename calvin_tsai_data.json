@@ -1,0 +1,58 @@
+{
+  "avatar": "CT",
+  "firstName": "Calvin",
+  "lastName": "Tsai",
+  "subtitle": "Web3 Trader & Content Creator · Hong Kong",
+  "links": [
+    {
+      "name": "Instagram",
+      "icon": "ig",
+      "href": "https://www.instagram.com/calvin_tsai_trading",
+      "desc": "@calvin_tsai_trading · 11.7K followers"
+    },
+    {
+      "name": "X (Twitter)",
+      "icon": "X",
+      "href": "https://x.com/calvintsaikm",
+      "desc": "@calvintsaikm · 19.9K followers"
+    },
+    {
+      "name": "Facebook",
+      "icon": "fb",
+      "href": "https://www.facebook.com/programtrading.hk",
+      "desc": "Calvin Tsai · 26.8K followers"
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "in",
+      "href": "https://hk.linkedin.com/in/calvin-tsai-trading",
+      "desc": "linkedin.com/in/calvin-tsai-trading · 1.9K followers"
+    }
+  ],
+  "stats": [
+    {
+      "value": "60K+",
+      "label": "Total Followers"
+    },
+    {
+      "value": "Weekly",
+      "label": "Content / Week"
+    },
+    {
+      "value": "HKPTRC",
+      "label": "Community"
+    }
+  ],
+  "focus": [
+    "Quant Trading",
+    "Crypto",
+    "BTC/ETH",
+    "Cantonese",
+    "Algo Trade",
+    "Program Trading"
+  ],
+  "bioHtml": "Calvin Tsai is a Hong Kong-based quant trader and crypto KOL. Co-founder of <a href=\"https://www.hkptrc.com\" target=\"_blank\" rel=\"noopener noreferrer\">HKPTRC</a>, focusing on quantitative strategies and crypto market education in Cantonese.",
+  "connectHtml": "Active on Instagram, X, Facebook, and LinkedIn. Also appears on podcasts and Threads for market commentary.",
+  "note": "Data source: manually maintained daily in calvin_tsai_data.json.",
+  "footer": "Calvin Tsai Profile · Updated Daily"
+}

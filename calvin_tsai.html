@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calvin Tsai 蔡嘉文 — Web3 KOL</title>
+<title>Calvin Tsai - Web3 KOL</title>
 <style>
-:root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--gd:#C4946C;--bl:#E8D5C4}
+:root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--bl:#E8D5C4}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Times New Roman',Times,Georgia,serif;background:var(--cr);min-height:100vh;padding:40px 20px;color:var(--dk)}
 .container{max-width:720px;margin:0 auto}
@@ -41,81 +41,88 @@ footer{text-align:center;padding:30px 0 10px;color:var(--wg);font-size:11px;opac
 <div class="container">
 <div class="card">
 <header>
-<div class="avatar">CT</div>
-<h1>Calvin <em>Tsai</em></h1>
-<p class="subtitle">蔡嘉文 · Web3 Trader & Content Creator · Hong Kong</p>
+<div class="avatar" id="avatar">CT</div>
+<h1><span id="firstName">Calvin</span> <em id="lastName">Tsai</em></h1>
+<p class="subtitle" id="subtitle">Web3 Trader & Content Creator · Hong Kong</p>
 <div class="divider"></div>
 </header>
 
 <h2>Social & Platform Links</h2>
+<div id="links"></div>
 
-<a href="https://www.instagram.com/calvin_tsai_trading" target="_blank">
-<div class="link-card">
-<div class="link-icon">ig</div>
-<div class="link-info">
-<div class="link-name">Instagram</div>
-<div class="link-url">@calvin_tsai_trading · 11.7K followers</div>
-</div>
-</div>
-</a>
-
-<a href="https://x.com/calvintsaikm" target="_blank">
-<div class="link-card">
-<div class="link-icon">𝕏</div>
-<div class="link-info">
-<div class="link-name">X (Twitter)</div>
-<div class="link-url">@calvintsaikm · 19.9K followers</div>
-</div>
-</div>
-</a>
-
-<a href="https://www.facebook.com/programtrading.hk" target="_blank">
-<div class="link-card">
-<div class="link-icon">fb</div>
-<div class="link-info">
-<div class="link-name">Facebook</div>
-<div class="link-url">蔡嘉民 Calvin · 26.8K followers</div>
-</div>
-</div>
-</a>
-
-<a href="https://hk.linkedin.com/in/calvin-tsai-trading" target="_blank">
-<div class="link-card">
-<div class="link-icon">in</div>
-<div class="link-info">
-<div class="link-name">LinkedIn</div>
-<div class="link-url">linkedin.com/in/calvin-tsai-trading · 1.9K followers</div>
-</div>
-</div>
-</a>
-
-<div class="data-grid">
-<div class="data-item"><div class="data-num">≈60K</div><div class="data-label">Total Followers</div></div>
-<div class="data-item"><div class="data-num">Weekly</div><div class="data-label">Content / Week</div></div>
-<div class="data-item"><div class="data-num">HKPTRC</div><div class="data-label">Community</div></div>
-</div>
+<div class="data-grid" id="stats"></div>
 
 <h2>Content Focus</h2>
-<div class="badges">
-<span class="badge">Quant Trading</span>
-<span class="badge">Crypto</span>
-<span class="badge">BTC/ETH</span>
-<span class="badge">Cantonese</span>
-<span class="badge">Algo Trade</span>
-<span class="badge">Program Trading</span>
-</div>
-<p class="bio">
-Calvin Tsai (蔡嘉民) is a Hong Kong-based quant trader and crypto KOL. Co-founder of <a href="https://www.hkptrc.com" target="_blank">HKPTRC</a> (香港程式交易研究中心), managing a 1.6B HKD quantitative fund. Formerly ranked #1 on OKX Solana with 3% volume share. Monthly turnover exceeds 10B USD across CEX market making. Content covers Bitcoin strategy, algorithmic trading, and crypto market analysis — all in Cantonese.
-</p>
+<div class="badges" id="focusBadges"></div>
+<p class="bio" id="bio"></p>
 
 <h2>How to Connect</h2>
-<p class="bio">
-Active on <a href="https://www.instagram.com/calvin_tsai_trading" target="_blank">Instagram</a>, <a href="https://x.com/calvintsaikm" target="_blank">X (Twitter)</a>, <a href="https://www.facebook.com/programtrading.hk" target="_blank">Facebook</a>, and <a href="https://hk.linkedin.com/in/calvin-tsai-trading" target="_blank">LinkedIn</a>. Also appears on YouTube podcasts (漲樂全球通, Invest for Good, 華盛証券) and <a href="https://www.threads.com/@calvintsaikm" target="_blank">Threads</a>.
-</p>
+<p class="bio" id="connect"></p>
 
-<p class="note">* Data sourced via real-time web search (May 2025). Follower counts are approximate.</p>
+<p class="note" id="note"></p>
 </div>
-<footer>Calvin Tsai Profile · Claude Color Palette · Times New Roman</footer>
+<footer id="footer">Calvin Tsai Profile · Updated Daily</footer>
 </div>
+
+<script>
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function render(data) {
+  document.getElementById("avatar").textContent = data.avatar || "CT";
+  document.getElementById("firstName").textContent = data.firstName || "Calvin";
+  document.getElementById("lastName").textContent = data.lastName || "Tsai";
+  document.getElementById("subtitle").textContent = data.subtitle || "";
+  document.getElementById("bio").innerHTML = data.bioHtml || "";
+  document.getElementById("connect").innerHTML = data.connectHtml || "";
+  document.getElementById("note").textContent = data.note || "";
+  document.getElementById("footer").textContent = data.footer || "Calvin Tsai Profile · Updated Daily";
+
+  const linksHtml = (data.links || []).map((item) => `
+    <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener noreferrer">
+      <div class="link-card">
+        <div class="link-icon">${escapeHtml(item.icon)}</div>
+        <div class="link-info">
+          <div class="link-name">${escapeHtml(item.name)}</div>
+          <div class="link-url">${escapeHtml(item.desc)}</div>
+        </div>
+      </div>
+    </a>
+  `).join("");
+  document.getElementById("links").innerHTML = linksHtml;
+
+  const statsHtml = (data.stats || []).map((item) => `
+    <div class="data-item">
+      <div class="data-num">${escapeHtml(item.value)}</div>
+      <div class="data-label">${escapeHtml(item.label)}</div>
+    </div>
+  `).join("");
+  document.getElementById("stats").innerHTML = statsHtml;
+
+  const focusHtml = (data.focus || []).map((item) => `
+    <span class="badge">${escapeHtml(item)}</span>
+  `).join("");
+  document.getElementById("focusBadges").innerHTML = focusHtml;
+}
+
+async function loadDailyData() {
+  const dailyKey = new Date().toISOString().slice(0, 10);
+  const res = await fetch(`./calvin_tsai_data.json?day=${dailyKey}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load calvin_tsai_data.json");
+  const data = await res.json();
+  render(data);
+}
+
+loadDailyData().catch((err) => {
+  document.getElementById("note").textContent = "Failed to load dynamic data file.";
+  console.error(err);
+});
+</script>
 </body>
 </html>
