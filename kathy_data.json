@@ -1,0 +1,58 @@
+{
+  "avatar": "KT",
+  "firstName": "Kathy",
+  "lastName": "",
+  "subtitle": "Web3 Creator · Hong Kong",
+  "links": [
+    {
+      "name": "Instagram",
+      "icon": "ig",
+      "href": "https://www.instagram.com/",
+      "desc": "@kathy · followers"
+    },
+    {
+      "name": "X (Twitter)",
+      "icon": "X",
+      "href": "https://x.com/",
+      "desc": "@kathy · followers"
+    },
+    {
+      "name": "YouTube",
+      "icon": "yt",
+      "href": "https://www.youtube.com/",
+      "desc": "Kathy Channel · subscribers"
+    },
+    {
+      "name": "Telegram",
+      "icon": "tg",
+      "href": "https://t.me/",
+      "desc": "Kathy Community · members"
+    }
+  ],
+  "stats": [
+    {
+      "value": "TBD",
+      "label": "Total Followers"
+    },
+    {
+      "value": "Daily",
+      "label": "Content / Week"
+    },
+    {
+      "value": "Web3",
+      "label": "Community"
+    }
+  ],
+  "focus": [
+    "Web3 News",
+    "Market Notes",
+    "Token Research",
+    "On-Chain",
+    "Cantonese",
+    "Education"
+  ],
+  "bioHtml": "Kathy is a Web3 content creator focused on concise market explainers and practical on-chain insights.",
+  "connectHtml": "Follow Kathy on Instagram, X, YouTube, and Telegram for daily updates.",
+  "note": "Data source: manually maintained daily in kathy_data.json.",
+  "footer": "Kathy Profile · Updated Daily"
+}

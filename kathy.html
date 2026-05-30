@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kathy - Web3 KOL</title>
+<style>
+:root{--tc:#D97757;--cr:#F5F0EB;--ww:#FBF9F7;--dk:#1A1A1A;--ch:#2C2C2C;--wg:#8B7E74;--bl:#E8D5C4}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Times New Roman',Times,Georgia,serif;background:var(--cr);min-height:100vh;padding:40px 20px;color:var(--dk)}
+.container{max-width:720px;margin:0 auto}
+.card{background:var(--ww);padding:50px 60px;box-shadow:0 4px 24px rgba(26,26,26,.05)}
+header{text-align:center;margin-bottom:40px;padding-bottom:30px;border-bottom:1px solid var(--bl)}
+.avatar{width:80px;height:80px;border-radius:50%;background:var(--tc);margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-size:36px;color:var(--ww)}
+h1{font-size:34px;font-weight:400;color:var(--dk);margin-bottom:4px}
+h1 em{font-style:italic;color:var(--tc)}
+.subtitle{font-size:14px;color:var(--wg);letter-spacing:.06em;text-transform:uppercase}
+.divider{width:50px;height:2px;background:var(--tc);margin:16px auto}
+h2{font-size:16px;color:var(--wg);letter-spacing:.1em;text-transform:uppercase;margin:30px 0 14px;font-weight:400}
+.link-card{display:flex;align-items:center;gap:14px;padding:14px 18px;border:1px solid var(--bl);margin-bottom:10px;transition:background .2s}
+.link-card:hover{background:rgba(217,119,87,.04)}
+.link-icon{width:36px;height:36px;border-radius:8px;background:var(--tc);display:flex;align-items:center;justify-content:center;color:var(--ww);font-size:16px;flex-shrink:0;font-weight:700}
+.link-info{flex:1}
+.link-name{font-size:15px;font-weight:700;color:var(--dk);margin-bottom:2px}
+.link-url{font-size:12px;color:var(--wg)}
+a{color:var(--tc);text-decoration:none}
+a:hover{text-decoration:underline}
+.bio{font-size:15px;line-height:1.8;color:var(--ch);margin:20px 0}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.badge{background:var(--bl);color:var(--tc);padding:6px 14px;border-radius:20px;font-size:12px}
+.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.data-item{text-align:center;padding:16px;background:var(--cr)}
+.data-num{font-size:28px;font-weight:700;color:var(--tc)}
+.data-label{font-size:11px;color:var(--wg);text-transform:uppercase;letter-spacing:.06em;margin-top:4px}
+.note{font-size:12px;color:var(--wg);font-style:italic;text-align:center;margin-top:30px;opacity:.7}
+footer{text-align:center;padding:30px 0 10px;color:var(--wg);font-size:11px;opacity:.6}
+@media(max-width:600px){.card{padding:30px 24px}h1{font-size:26px}.data-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="card">
+<header>
+<div class="avatar" id="avatar">KT</div>
+<h1><span id="firstName">Kathy</span> <em id="lastName"></em></h1>
+<p class="subtitle" id="subtitle">Web3 Creator · Hong Kong</p>
+<div class="divider"></div>
+</header>
+
+<h2>Social & Platform Links</h2>
+<div id="links"></div>
+
+<div class="data-grid" id="stats"></div>
+
+<h2>Content Focus</h2>
+<div class="badges" id="focusBadges"></div>
+<p class="bio" id="bio"></p>
+
+<h2>How to Connect</h2>
+<p class="bio" id="connect"></p>
+
+<p class="note" id="note"></p>
+</div>
+<footer id="footer">Kathy Profile · Updated Daily</footer>
+</div>
+
+<script>
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function render(data) {
+  document.getElementById("avatar").textContent = data.avatar || "KT";
+  document.getElementById("firstName").textContent = data.firstName || "Kathy";
+  document.getElementById("lastName").textContent = data.lastName || "";
+  document.getElementById("subtitle").textContent = data.subtitle || "";
+  document.getElementById("bio").innerHTML = data.bioHtml || "";
+  document.getElementById("connect").innerHTML = data.connectHtml || "";
+  document.getElementById("note").textContent = data.note || "";
+  document.getElementById("footer").textContent = data.footer || "Kathy Profile · Updated Daily";
+
+  const linksHtml = (data.links || []).map((item) => `
+    <a href="${escapeHtml(item.href)}" target="_blank" rel="noopener noreferrer">
+      <div class="link-card">
+        <div class="link-icon">${escapeHtml(item.icon)}</div>
+        <div class="link-info">
+          <div class="link-name">${escapeHtml(item.name)}</div>
+          <div class="link-url">${escapeHtml(item.desc)}</div>
+        </div>
+      </div>
+    </a>
+  `).join("");
+  document.getElementById("links").innerHTML = linksHtml;
+
+  const statsHtml = (data.stats || []).map((item) => `
+    <div class="data-item">
+      <div class="data-num">${escapeHtml(item.value)}</div>
+      <div class="data-label">${escapeHtml(item.label)}</div>
+    </div>
+  `).join("");
+  document.getElementById("stats").innerHTML = statsHtml;
+
+  const focusHtml = (data.focus || []).map((item) => `
+    <span class="badge">${escapeHtml(item)}</span>
+  `).join("");
+  document.getElementById("focusBadges").innerHTML = focusHtml;
+}
+
+async function loadDailyData() {
+  const dailyKey = new Date().toISOString().slice(0, 10);
+  const res = await fetch(`./kathy_data.json?day=${dailyKey}`, { cache: "no-store" });
+  if (!res.ok) throw new Error("Failed to load kathy_data.json");
+  const data = await res.json();
+  render(data);
+}
+
+loadDailyData().catch((err) => {
+  document.getElementById("note").textContent = "Failed to load dynamic data file.";
+  console.error(err);
+});
+</script>
+</body>
+</html>
